@@ -6,7 +6,17 @@
 # If the person is at least 20 year old, it should display "adult".
 
 def categorize_age(age):
-    ageCategory = "TBD"
+
+    if age <= 1 and age > 0:
+        ageCategory = 'infant'
+    elif age > 1 and age < 13:
+        ageCategory = 'Child'
+    elif age >= 13 and age <20:
+        ageCategory = 'Teenager'
+    elif age >= 20:
+        ageCategory = 'Adult'
+    elif age <=0:
+        ageCategory = 'Your child has not been born yet'
     ######################
     # WRITE YOUR CODE HERE
     ######################
@@ -16,7 +26,7 @@ def categorize_age(age):
 
 
 #### This piece of the code has been done for you,
-#### you only need to worry about the actual shipping 
+#### you only need to worry about the actual shipping
 #### charge logic in the weight_conversion function
 if __name__ == '__main__':
     # Local variables
